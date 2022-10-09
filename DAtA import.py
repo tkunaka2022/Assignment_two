@@ -1,14 +1,11 @@
 import PySimpleGUI as sg
 import pandas as pd
-
-
 def table_example():
     sg.set_options(auto_size_buttons=True)
     name_of_file = sg.popup_get_file(
         'filename to open', no_window=True, file_types=(("CSV Files", "*.csv"),))
     if name_of_file == '':
         return
-
     data = []
     header_list = []
     button = sg.popup_ok('Do you wish to continue?')
